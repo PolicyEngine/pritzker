@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolicyEngine - Pritzker Family Foundation Grant Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c5282;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #718096;
+            font-size: 1.1rem;
+        }
+
+        .section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .document-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .document-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 1rem;
+            transition: all 0.2s;
+        }
+
+        .document-card:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        .document-card h3 {
+            color: #2c5282;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .document-card a {
+            color: #3182ce;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .document-card a:hover {
+            text-decoration: underline;
+        }
+
+        .document-card p {
+            color: #718096;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .complete {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+
+        .needs-input {
+            background: #fed7d7;
+            color: #742a2a;
+        }
+
+        .info-box {
+            background: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #718096;
+        }
+
+        footer a {
+            color: #3182ce;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PolicyEngine</h1>
+            <p class="subtitle">Pritzker Family Foundation Grant Application Materials</p>
+            <p style="margin-top: 1rem; color: #718096;">Policy Analysis Expansion Project | 2026-2027</p>
+        </header>
+
+        <section class="section">
+            <h2>📋 Application Responses</h2>
+            <div class="document-grid">
+                <div class="document-card">
+                    <h3>Financial Statements Analysis</h3>
+                    <a href="../responses/financial_statements_analysis.md">View Response</a>
+                    <p>Analysis of deficits, expense/revenue fluctuations, and operational health</p>
+                    <span class="status-badge complete">Complete</span>
+                </div>
+
+                <div class="document-card">
+                    <h3>YTD Budget & Revenue</h3>
+                    <a href="../responses/ytd_budget_and_revenue.md">View Response</a>
+                    <p>Year-to-date tracking, auditor findings, and significant events</p>
+                    <span class="status-badge complete">Complete</span>
+                </div>
+
+                <div class="document-card">
+                    <h3>Project Summary</h3>
+                    <a href="../responses/project_summary.md">View Response</a>
+                    <p>Project overview, timeline, and community need</p>
+                    <span class="status-badge needs-input">Needs Dates/Budget</span>
+                </div>
+
+                <div class="document-card">
+                    <h3>Project Narrative</h3>
+                    <a href="../responses/project_narrative.md">View Response</a>
+                    <p>Purpose, alignment, capacity, collaboration, and sustainability</p>
+                    <span class="status-badge complete">Complete</span>
+                </div>
+
+                <div class="document-card">
+                    <h3>Fiscal Sponsor Information</h3>
+                    <a href="../responses/fiscal_sponsor_information.md">View Response</a>
+                    <p>PolicyEngine details and PSL Foundation relationship</p>
+                    <span class="status-badge needs-input">Needs Contact Info</span>
+                </div>
+
+                <div class="document-card">
+                    <h3>Key Staff</h3>
+                    <a href="../responses/key_staff.md">View Response</a>
+                    <p>Project leadership team backgrounds</p>
+                    <span class="status-badge needs-input">Needs Staff Info</span>
+                </div>
+
+                <div class="document-card">
+                    <h3>Contact Information</h3>
+                    <a href="../responses/contact_information.md">View Response</a>
+                    <p>Signatory, project lead, and administrative contacts</p>
+                    <span class="status-badge needs-input">Needs All Contacts</span>
+                </div>
+
+                <div class="document-card">
+                    <h3>Open-Ended Questions</h3>
+                    <a href="../responses/open_ended_questions.md">View Response</a>
+                    <p>Representation, commitment, and lived experience</p>
+                    <span class="status-badge complete">Complete</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>💰 Financial Documents</h2>
+            <div class="document-grid">
+                <div class="document-card">
+                    <h3>Audited Financial Statements (FY2023)</h3>
+                    <a href="../financials/PSL Foundation - 6.30.23 Issued Audited Financial Statements (3)_compressed.pdf">Download PDF</a>
+                    <p>Complete audited statements for fiscal year ending June 30, 2023</p>
+                </div>
+
+                <div class="document-card">
+                    <h3>Statement of Activity (FY2025)</h3>
+                    <a href="../financials/StatementofActivity_2025.pdf">Download PDF</a>
+                    <p>July 2024 - June 2025 income and expenses</p>
+                </div>
+
+                <div class="document-card">
+                    <h3>Statement of Activity (FY2024)</h3>
+                    <a href="../financials/StatementofActivity_2024.pdf">Download PDF</a>
+                    <p>July 2023 - June 2024 income and expenses</p>
+                </div>
+
+                <div class="document-card">
+                    <h3>Operational Budget</h3>
+                    <a href="../financials/PSL-F_OperationalBudget.pdf">Download PDF</a>
+                    <p>FY2024 and FY2025 budget comparison</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🎯 Impact Plan</h2>
+            <div class="document-card">
+                <h3>Impact Plan: Policy Analysis Expansion</h3>
+                <a href="../impact_plan/Impact Plan Policy Engine.docx">Download Document</a>
+                <p>Agreed-upon strategies, indicators, and completion dates for the project</p>
+                <ul style="margin-top: 1rem; color: #718096; font-size: 0.9rem; padding-left: 1.5rem;">
+                    <li>Child Poverty Impact Dashboard (April 2026)</li>
+                    <li>50-state TANF/CCDF modeling (October 2026)</li>
+                    <li>Training for 30+ states (October 2026)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📄 Supporting Documents</h2>
+            <div class="document-card">
+                <h3>Application Questionnaire</h3>
+                <a href="../supporting_documents/questionnaire.pdf">View PDF</a>
+                <p>Complete Pritzker Family Foundation application questionnaire</p>
+            </div>
+        </section>
+
+        <div class="info-box">
+            <strong>About This Repository:</strong> This repository contains all application materials for PolicyEngine's Pritzker Family Foundation grant.
+            All financial information is based on PSL Foundation's audited statements and operational budgets.
+            See <a href="../COMPLETION_STATUS.md">COMPLETION_STATUS.md</a> for items requiring additional input.
+        </div>
+
+        <footer>
+            <p>PolicyEngine operates as a fiscally sponsored project under PSL Foundation (EIN: 86-3092437)</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="https://policyengine.org">policyengine.org</a> |
+                <a href="https://github.com/PolicyEngine/pritzker">GitHub Repository</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
