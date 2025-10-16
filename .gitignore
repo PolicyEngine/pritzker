@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Temporary files
+*.tmp
+~$*
+
+# Sensitive information (if any gets added)
+*secret*
+*password*
+*.key
