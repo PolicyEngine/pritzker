@@ -7,6 +7,11 @@ metadata:
   access_code: "PFFSA2025!"
   portal_url: "https://www.grantinterface.com/Home/Logon?urlkey=pritzkerfoundation"
   character_limit_default: 10000
+  project_name: "PolicyEngine Policy Analysis Expansion"
+  project_start_date: "11/01/2025"
+  project_end_date: "10/31/2026"
+  total_project_budget: 150000
+  amount_requested_from_pff: 150000
 
 sections:
   financial_statements_analysis:
