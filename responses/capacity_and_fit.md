@@ -16,7 +16,7 @@ Operating under PSL Foundation's fiscal sponsorship connects PolicyEngine to the
 PolicyEngine has demonstrated capability in modeling child poverty impacts through existing CTC and EITC analysis features. The proposed dashboard builds on proven functionality rather than developing entirely new capabilities.
 
 **Training and Support Experience:**
-[NEEDS TO BE COMPLETED IF APPLICABLE - Any previous webinars, training sessions, or technical assistance PolicyEngine has provided]
+PolicyEngine has conducted dozens of webinars and training sessions, with recordings available at youtube.com/policyengine. This experience demonstrates the organization's capability to deliver effective training to national and state partners.
 
 **Technical Team:**
 PolicyEngine's development team brings expertise in:
