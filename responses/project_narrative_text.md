@@ -1,9 +1,3 @@
-# Project Narrative
-
-**Question:** Describe the purpose and intended impact of this project.
-
-**Response:**
-
 **Purpose:**
 
 This project expands PolicyEngine's analytical capabilities to comprehensively model family economic security policies affecting prenatal-to-age-3 children across all 50 states. The expansion focuses on three core deliverables:

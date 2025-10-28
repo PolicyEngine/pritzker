@@ -1,9 +1,3 @@
-# Alignment With Goal
-
-**Question:** How does the proposed project align with and advance the goal of this focus area?
-
-**Response:**
-
 This project directly advances the Pritzker Children's Initiative's Movement Building strategy by providing the analytical infrastructure necessary for advocates, policymakers, and researchers to make evidence-based decisions about prenatal-to-age-3 investments.
 
 The project aligns with PCI's North Star goals through:

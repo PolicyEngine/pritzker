@@ -1,9 +1,3 @@
-# Lived Experience
-
-**Question:** If not included in your responses above, how is your organization informed by the perspectives of those with lived experience in its work?
-
-**Response:**
-
 [NEEDS TO BE COMPLETED - Describe how PolicyEngine incorporates perspectives of people with lived experience of poverty, use of safety net programs, or raising young children, through:
 - Advisory boards or councils
 - User testing and feedback processes

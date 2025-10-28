@@ -1,9 +1,3 @@
-# Representation
-
-**Question:** How is your organization representative of or connected to the communities you serve?
-
-**Response:**
-
 PolicyEngine serves policymakers, researchers, advocates, and families seeking to understand how public policies affect household finances and child well-being. The organization maintains connection to these communities through:
 
 **User-Centered Design:**

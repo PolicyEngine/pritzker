@@ -1,9 +1,3 @@
-# Description of Entity With a Fiscal Sponsor or Agent
-
-**Question:** Briefly describe the entity that will be implementing this project.
-
-**Response:**
-
 PolicyEngine is a nonprofit organization with the mission of computing the impact of public policy for the world. PolicyEngine develops and operates free, open-source software that enables policymakers, researchers, advocates, and the public to analyze how tax and benefit policies affect society.
 
 PolicyEngine provides accessible policy analysis tools that model federal and state tax and benefit programs, allowing users to:

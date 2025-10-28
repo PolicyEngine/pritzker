@@ -1,9 +1,3 @@
-# Commitment
-
-**Question:** What current efforts and initiatives of your organization reflect your commitment to the communities that you serve or represent?
-
-**Response:**
-
 **Free and Open Access:**
 PolicyEngine operates all tools free of charge with no paywalls or usage restrictions, ensuring advocates in under-resourced communities can access the same analytical capabilities as well-funded organizations.
 

@@ -1,9 +1,3 @@
-# Key Project Staff
-
-**Question:** List the names, roles, and brief backgrounds of the staff that will take a leadership role in implementing this project.
-
-**Response:**
-
 [NEEDS TO BE COMPLETED - Provide names, titles, and backgrounds of key PolicyEngine staff]
 
 **Template format:**

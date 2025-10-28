@@ -1,9 +1,3 @@
-# YTD Budget
-
-**Question:** How are revenue and expenses tracking to your organization's budget for the current fiscal year?
-
-**Response:**
-
 For FY2026 (July 2025 - June 2026), revenue and expenses are on track with the budgeted plan:
 
 - **Budgeted Revenue (FY2026):** $1,000,000

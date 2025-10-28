@@ -1,16 +1,3 @@
-# Questions from Audited Financials
-
-## Question
-
-In the period in which you or your fiscal sponsor provided financial statements, to what do you attribute:
-
-- A deficit in any year,
-- Any significant fluctuation in expenses between years,
-- Any significant fluctuation in revenues between years, and
-- Any other significant change in your operational health as indicated in your audited financial statements?
-
-## Response
-
 ### A. Deficit in FY2025 (-$61,469)
 
 The deficit in FY2025 was planned and budgeted. After achieving surpluses in FY2023 ($364,486 change in net assets) and FY2024 ($133,541), PSL Foundation built net assets to $619,507 by June 2023. The FY2025 deficit reflects deployment of these accumulated reserves to scale operations while revenue reached $1,000,160.

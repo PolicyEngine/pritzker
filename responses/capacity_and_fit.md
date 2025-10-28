@@ -1,9 +1,3 @@
-# Capacity & Fit
-
-**Question:** Briefly describe your organization's history as it relates to this project and how this makes your organization uniquely capable of implementing this project and ensuring its success.
-
-**Response:**
-
 PolicyEngine possesses unique technical and operational capabilities that position it to deliver this expansion successfully:
 
 **Proven Technical Platform:**

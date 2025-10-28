@@ -1,9 +1,3 @@
-# Collaboration
-
-**Question:** If the activities described in this proposal include multiple organizations, describe how your organization will collaborate with other organizations to ensure this project is a success.
-
-**Response:**
-
 This project centers on PolicyEngine's technical development work, with collaboration through training and consultation partnerships:
 
 **National PN-3 Partners:**

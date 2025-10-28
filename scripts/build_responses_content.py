@@ -10,18 +10,7 @@ import yaml
 from pathlib import Path
 
 
-def extract_question_and_response(markdown_content):
-    """Extract question and response text separately."""
-    import re
-
-    # Look for **Question:** or ## Question pattern
-    question_match = re.search(r'\*\*Question:\*\*\s*(.*?)(?=\*\*Response:\*\*|$)', markdown_content, re.DOTALL)
-    response_match = re.search(r'\*\*Response:\*\*\s*(.*)', markdown_content, re.DOTALL)
-
-    question = question_match.group(1).strip() if question_match else ''
-    response = response_match.group(1).strip() if response_match else markdown_content
-
-    return question, response
+# Question extraction removed - questions now come from YAML
 
 
 def strip_markdown_formatting(text):
@@ -78,14 +67,11 @@ def process_responses():
             print(f"Warning: {filepath} not found")
             continue
 
-        # Read markdown content
-        markdown_content = filepath.read_text()
+        # Read markdown content (contains ONLY the response)
+        response_markdown = filepath.read_text()
 
-        # Extract question and response separately
-        question, response = extract_question_and_response(markdown_content)
-
-        # Get plain text version of RESPONSE ONLY for character counting and copying
-        plain_text_response = strip_markdown_formatting(response)
+        # Get plain text version for character counting and copying
+        plain_text_response = strip_markdown_formatting(response_markdown)
         char_count = len(plain_text_response)
 
         # Calculate percentage of limit
@@ -96,14 +82,17 @@ def process_responses():
         over_limit = char_count > char_limit
 
         # Check for placeholder text that needs completion
-        needs_completion = '[NEEDS TO BE COMPLETED]' in markdown_content or '[TO BE COMPLETED]' in markdown_content
+        needs_completion = '[NEEDS TO BE COMPLETED]' in response_markdown or '[TO BE COMPLETED]' in response_markdown
+
+        # Get question from YAML (not from markdown)
+        question = section_data.get('question', '')
 
         output[section_key] = {
             'title': section_data['title'],
             'file': section_data['file'],
-            'question': strip_markdown_formatting(question),
-            'markdown': markdown_content,
-            'plainText': plain_text_response,  # Only the response, not the question
+            'question': question,  # From YAML
+            'markdown': response_markdown,  # Response only
+            'plainText': plain_text_response,  # Response only (plain text)
             'charCount': char_count,
             'charLimit': char_limit,
             'charPercentage': round(char_percentage, 1),
