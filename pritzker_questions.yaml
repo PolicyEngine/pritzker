@@ -43,7 +43,8 @@ sections:
     title: "Project Summary (2 sentences)"
     question: "In two sentences, please describe this project's anticipated impact and a high-level summary of the activities your organization will undertake to reach the desired impact."
     file: "responses/project_summary_text.md"
-    char_limit: 10000
+    char_limit: 1250
+    note: "Project Name: PolicyEngine Policy Analysis Expansion"
 
   project_need:
     title: "Project Need/Opportunity"
