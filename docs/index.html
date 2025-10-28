@@ -214,6 +214,64 @@
             border-radius: 4px;
         }
 
+        .copy-button {
+            background: #3182ce;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .copy-button:hover {
+            background: #2c5282;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(49, 130, 206, 0.3);
+        }
+
+        .copy-button:active {
+            transform: translateY(0);
+        }
+
+        .copy-button.copied {
+            background: #38a169;
+        }
+
+        .copy-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        .quick-copy {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #3182ce;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .response-card:hover .quick-copy {
+            opacity: 1;
+        }
+
+        .quick-copy:hover {
+            background: #2c5282;
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -294,9 +352,23 @@
                         <div class="char-bar ${barClass}" style="width: ${displayPercentage}%"></div>
                     </div>
                     <span class="status-badge ${statusBadgeClass}">${statusText}</span>
+                    <button class="quick-copy" data-key="${key}">📋 Quick Copy</button>
                 `;
 
-                card.addEventListener('click', () => showResponse(key, data));
+                // Add click handler for the card (but not the button)
+                card.addEventListener('click', (e) => {
+                    if (!e.target.classList.contains('quick-copy')) {
+                        showResponse(key, data);
+                    }
+                });
+
+                // Add click handler for quick copy button
+                const quickCopyBtn = card.querySelector('.quick-copy');
+                quickCopyBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    copyToClipboard(data.plainText, quickCopyBtn);
+                });
+
                 container.appendChild(card);
             }
         }
@@ -319,10 +391,44 @@
                 </div>
                 ${data.overLimit ? '<div class="info-box" style="background: #fff5f5; border-color: #e53e3e;"><strong>⚠️ Over Limit:</strong> This response exceeds the 10,000 character limit and must be shortened before submission.</div>' : ''}
                 ${data.needsCompletion ? '<div class="info-box" style="background: #fffaf0; border-color: #ed8936;"><strong>⚠️ Needs Completion:</strong> This response contains placeholders that need to be filled in.</div>' : ''}
+                <button class="copy-button" id="copyButton">
+                    <svg class="copy-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                    <span class="button-text">Copy Plain Text for Foundant</span>
+                </button>
                 <div class="response-text">${data.plainText}</div>
             `;
 
+            // Add copy button handler
+            const copyButton = modalContent.querySelector('#copyButton');
+            copyButton.addEventListener('click', () => {
+                copyToClipboard(data.plainText, copyButton);
+            });
+
             modal.style.display = 'block';
+        }
+
+        // Copy to clipboard function
+        function copyToClipboard(text, button) {
+            navigator.clipboard.writeText(text).then(() => {
+                const originalHTML = button.innerHTML;
+                button.classList.add('copied');
+                button.innerHTML = `
+                    <svg class="copy-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="button-text">Copied!</span>
+                `;
+
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    button.innerHTML = originalHTML;
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                alert('Failed to copy to clipboard. Please try selecting and copying manually.');
+            });
         }
 
         // Close modal
