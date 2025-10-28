@@ -10,6 +10,20 @@ import yaml
 from pathlib import Path
 
 
+def extract_question_and_response(markdown_content):
+    """Extract question and response text separately."""
+    import re
+
+    # Look for **Question:** or ## Question pattern
+    question_match = re.search(r'\*\*Question:\*\*\s*(.*?)(?=\*\*Response:\*\*|$)', markdown_content, re.DOTALL)
+    response_match = re.search(r'\*\*Response:\*\*\s*(.*)', markdown_content, re.DOTALL)
+
+    question = question_match.group(1).strip() if question_match else ''
+    response = response_match.group(1).strip() if response_match else markdown_content
+
+    return question, response
+
+
 def strip_markdown_formatting(text):
     """Remove markdown formatting to get plain text for character counting."""
     import re
@@ -67,9 +81,12 @@ def process_responses():
         # Read markdown content
         markdown_content = filepath.read_text()
 
-        # Get plain text version for character counting
-        plain_text = strip_markdown_formatting(markdown_content)
-        char_count = len(plain_text)
+        # Extract question and response separately
+        question, response = extract_question_and_response(markdown_content)
+
+        # Get plain text version of RESPONSE ONLY for character counting and copying
+        plain_text_response = strip_markdown_formatting(response)
+        char_count = len(plain_text_response)
 
         # Calculate percentage of limit
         char_limit = section_data.get('char_limit', 10000)
@@ -84,8 +101,9 @@ def process_responses():
         output[section_key] = {
             'title': section_data['title'],
             'file': section_data['file'],
+            'question': strip_markdown_formatting(question),
             'markdown': markdown_content,
-            'plainText': plain_text,
+            'plainText': plain_text_response,  # Only the response, not the question
             'charCount': char_count,
             'charLimit': char_limit,
             'charPercentage': round(char_percentage, 1),
