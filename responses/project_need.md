@@ -1,4 +1,4 @@
-Policymakers, researchers, and advocates lack accessible tools to rigorously analyze how tax and benefit policies affect child poverty and family economic security. While child poverty has declined significantly in recent years due to policy interventions like the expanded Child Tax Credit, understanding the specific impacts of policy variations across different states and family circumstances requires sophisticated modeling that is typically inaccessible to most stakeholders.
+Policymakers, researchers, and advocates lack accessible tools to rigorously analyze how tax and benefit policies affect child poverty and family economic security. Understanding the specific impacts of policy variations across different states and family circumstances requires sophisticated modeling that is typically inaccessible to most stakeholders.
 
 Current gaps in policy analysis infrastructure include:
 - Limited ability to model state-specific TANF and child care subsidy programs alongside federal policies
