@@ -1,19 +1,11 @@
-[NEEDS TO BE COMPLETED - Provide names, titles, and backgrounds of key PolicyEngine staff]
+**Max Ghenis, Co-founder and CEO**
+Max leads project strategy and partnership coordination. He previously founded and served as president of the UBI Center, a think tank researching universal basic income policies, and worked at Google as a data scientist, leading projects to make internal operations and products more inclusive across the world. Max earned a bachelor's degree in operations research from UC Berkeley and a master's degree in Data, Economics, and Development Policy from MIT.
 
-**Template format:**
+**Pavel Makarchuk, Policy Modeling Manager**
+Pavel leads state program rules implementation and technical validation. He earned a bachelor's degree in Economics from Marist College where he researched the economic implications of forced migration. Pavel manages the technical accuracy of tax and benefit policy modeling across PolicyEngine's platform.
 
-**[Name]:** [Title/Role]
-[Name] will [describe responsibilities for this project]. [Name] has [background/experience relevant to the role, including years with organization and key accomplishments].
+**Ziming Hua, Policy Modeling Fellow**
+Ziming focuses on implementing and analyzing tax and benefit systems, developing simulation models to evaluate the impacts of policy reforms. Ziming holds a bachelor's degree in mathematical finance from the University of California, Irvine, and a master's degree in business analytics from Boston University.
 
-**Example structure:**
-- Technical Lead: Responsible for dashboard development, state rules implementation
-- Project Manager: Coordinates deliverables, manages timeline, liaises with PCI
-- Policy Analyst: Validates rules implementation, provides technical assistance to partners
-- Training Coordinator: Develops and delivers webinars and training sessions
-
-Note: Staff information should include relevant experience with:
-- Policy modeling and microsimulation
-- Web application development
-- Tax and benefit policy expertise
-- Training and technical assistance delivery
-- Open-source software development
+**David Trimmer, Policy Research Fellow**
+David contributes policy analysis and validation expertise. He is also a contributor at the People's Policy Project. Previously, he was a social policy intern at the Niskanen Center and a staff writer for Policy Perspectives. David holds an MPA from The George Washington University and a B.S. in Political Science from The Rochester Institute of Technology.
