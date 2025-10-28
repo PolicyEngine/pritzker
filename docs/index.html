@@ -19,7 +19,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 2rem;
         }
@@ -57,54 +57,92 @@
             border-bottom: 2px solid #e2e8f0;
         }
 
-        .document-grid {
+        .response-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
             margin-top: 1rem;
         }
 
-        .document-card {
+        .response-card {
             border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            padding: 1rem;
+            border-radius: 8px;
+            padding: 1.5rem;
             transition: all 0.2s;
+            cursor: pointer;
+            position: relative;
         }
 
-        .document-card:hover {
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        .response-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             transform: translateY(-2px);
         }
 
-        .document-card h3 {
+        .response-card.over-limit {
+            border-left: 4px solid #e53e3e;
+        }
+
+        .response-card.needs-completion {
+            border-left: 4px solid #ed8936;
+        }
+
+        .response-card.complete {
+            border-left: 4px solid #48bb78;
+        }
+
+        .response-card h3 {
             color: #2c5282;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .response-card p {
+            color: #718096;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .char-count {
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            background: #f7fafc;
+            border-radius: 4px;
+        }
+
+        .char-bar-container {
+            width: 100%;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
             margin-bottom: 0.5rem;
         }
 
-        .document-card a {
-            color: #3182ce;
-            text-decoration: none;
-            font-weight: 500;
+        .char-bar {
+            height: 100%;
+            transition: width 0.3s;
+            border-radius: 4px;
         }
 
-        .document-card a:hover {
-            text-decoration: underline;
+        .char-bar.safe {
+            background: linear-gradient(90deg, #48bb78, #38a169);
         }
 
-        .document-card p {
-            color: #718096;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
+        .char-bar.warning {
+            background: linear-gradient(90deg, #ed8936, #dd6b20);
+        }
+
+        .char-bar.over {
+            background: linear-gradient(90deg, #e53e3e, #c53030);
         }
 
         .status-badge {
             display: inline-block;
             padding: 0.25rem 0.75rem;
             border-radius: 12px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 500;
-            margin-top: 0.5rem;
         }
 
         .complete {
@@ -115,6 +153,57 @@
         .needs-input {
             background: #fed7d7;
             color: #742a2a;
+        }
+
+        .warning {
+            background: #feebc8;
+            color: #7c2d12;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 2% auto;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .response-text {
+            white-space: pre-wrap;
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #2d3748;
+            margin-top: 1rem;
+            padding: 1.5rem;
+            background: #f7fafc;
+            border-radius: 6px;
         }
 
         .info-box {
@@ -147,121 +236,18 @@
 
         <section class="section">
             <h2>📋 Application Responses</h2>
-            <div class="document-grid">
-                <div class="document-card">
-                    <h3>Financial Statements Analysis</h3>
-                    <a href="../responses/financial_statements_analysis.md">View Response</a>
-                    <p>Analysis of deficits, expense/revenue fluctuations, and operational health</p>
-                    <span class="status-badge complete">Complete</span>
-                </div>
-
-                <div class="document-card">
-                    <h3>YTD Budget & Revenue</h3>
-                    <a href="../responses/ytd_budget_and_revenue.md">View Response</a>
-                    <p>Year-to-date tracking, auditor findings, and significant events</p>
-                    <span class="status-badge complete">Complete</span>
-                </div>
-
-                <div class="document-card">
-                    <h3>Project Summary</h3>
-                    <a href="../responses/project_summary.md">View Response</a>
-                    <p>Project overview, timeline, and community need</p>
-                    <span class="status-badge needs-input">Needs Dates/Budget</span>
-                </div>
-
-                <div class="document-card">
-                    <h3>Project Narrative</h3>
-                    <a href="../responses/project_narrative.md">View Response</a>
-                    <p>Purpose, alignment, capacity, collaboration, and sustainability</p>
-                    <span class="status-badge complete">Complete</span>
-                </div>
-
-                <div class="document-card">
-                    <h3>Fiscal Sponsor Information</h3>
-                    <a href="../responses/fiscal_sponsor_information.md">View Response</a>
-                    <p>PolicyEngine details and PSL Foundation relationship</p>
-                    <span class="status-badge needs-input">Needs Contact Info</span>
-                </div>
-
-                <div class="document-card">
-                    <h3>Key Staff</h3>
-                    <a href="../responses/key_staff.md">View Response</a>
-                    <p>Project leadership team backgrounds</p>
-                    <span class="status-badge needs-input">Needs Staff Info</span>
-                </div>
-
-                <div class="document-card">
-                    <h3>Contact Information</h3>
-                    <a href="../responses/contact_information.md">View Response</a>
-                    <p>Signatory, project lead, and administrative contacts</p>
-                    <span class="status-badge needs-input">Needs All Contacts</span>
-                </div>
-
-                <div class="document-card">
-                    <h3>Open-Ended Questions</h3>
-                    <a href="../responses/open_ended_questions.md">View Response</a>
-                    <p>Representation, commitment, and lived experience</p>
-                    <span class="status-badge complete">Complete</span>
-                </div>
+            <div class="info-box">
+                <strong>Character Limits:</strong> All narrative responses have a 10,000 character limit in Foundant.
+                Responses shown below include character counts and progress bars.
             </div>
-        </section>
-
-        <section class="section">
-            <h2>💰 Financial Documents</h2>
-            <div class="document-grid">
-                <div class="document-card">
-                    <h3>Audited Financial Statements (FY2023)</h3>
-                    <a href="../financials/PSL Foundation - 6.30.23 Issued Audited Financial Statements (3)_compressed.pdf">Download PDF</a>
-                    <p>Complete audited statements for fiscal year ending June 30, 2023</p>
-                </div>
-
-                <div class="document-card">
-                    <h3>Statement of Activity (FY2025)</h3>
-                    <a href="../financials/StatementofActivity_2025.pdf">Download PDF</a>
-                    <p>July 2024 - June 2025 income and expenses</p>
-                </div>
-
-                <div class="document-card">
-                    <h3>Statement of Activity (FY2024)</h3>
-                    <a href="../financials/StatementofActivity_2024.pdf">Download PDF</a>
-                    <p>July 2023 - June 2024 income and expenses</p>
-                </div>
-
-                <div class="document-card">
-                    <h3>Operational Budget</h3>
-                    <a href="../financials/PSL-F_OperationalBudget.pdf">Download PDF</a>
-                    <p>FY2024 and FY2025 budget comparison</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>🎯 Impact Plan</h2>
-            <div class="document-card">
-                <h3>Impact Plan: Policy Analysis Expansion</h3>
-                <a href="../impact_plan/Impact Plan Policy Engine.docx">Download Document</a>
-                <p>Agreed-upon strategies, indicators, and completion dates for the project</p>
-                <ul style="margin-top: 1rem; color: #718096; font-size: 0.9rem; padding-left: 1.5rem;">
-                    <li>Child Poverty Impact Dashboard (April 2026)</li>
-                    <li>50-state TANF/CCDF modeling (October 2026)</li>
-                    <li>Training for 30+ states (October 2026)</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>📄 Supporting Documents</h2>
-            <div class="document-card">
-                <h3>Application Questionnaire</h3>
-                <a href="../supporting_documents/questionnaire.pdf">View PDF</a>
-                <p>Complete Pritzker Family Foundation application questionnaire</p>
+            <div id="responsesContainer" class="response-grid">
+                <!-- Will be populated by JavaScript -->
             </div>
         </section>
 
         <div class="info-box">
             <strong>About This Repository:</strong> This repository contains all application materials for PolicyEngine's Pritzker Family Foundation grant.
             All financial information is based on PSL Foundation's audited statements and operational budgets.
-            See <a href="../COMPLETION_STATUS.md">COMPLETION_STATUS.md</a> for items requiring additional input.
         </div>
 
         <footer>
@@ -272,5 +258,87 @@
             </p>
         </footer>
     </div>
+
+    <!-- Modal for viewing full response -->
+    <div id="responseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="responses_data.js"></script>
+    <script>
+        // Render response cards
+        function renderResponses() {
+            const container = document.getElementById('responsesContainer');
+
+            for (const [key, data] of Object.entries(responsesData)) {
+                const card = document.createElement('div');
+                card.className = `response-card ${data.overLimit ? 'over-limit' : (data.needsCompletion ? 'needs-completion' : 'complete')}`;
+
+                const percentage = data.charPercentage;
+                const barClass = percentage > 100 ? 'over' : (percentage > 80 ? 'warning' : 'safe');
+                const displayPercentage = Math.min(percentage, 100);
+
+                const statusBadgeClass = data.overLimit || data.needsCompletion ? 'needs-input' : 'complete';
+                const statusText = data.warning || 'Complete';
+
+                card.innerHTML = `
+                    <h3>${data.title}</h3>
+                    <div class="char-count">
+                        <strong>${data.charCount.toLocaleString()}</strong> / ${data.charLimit.toLocaleString()} characters
+                        <span style="float: right;">${percentage.toFixed(1)}%</span>
+                    </div>
+                    <div class="char-bar-container">
+                        <div class="char-bar ${barClass}" style="width: ${displayPercentage}%"></div>
+                    </div>
+                    <span class="status-badge ${statusBadgeClass}">${statusText}</span>
+                `;
+
+                card.addEventListener('click', () => showResponse(key, data));
+                container.appendChild(card);
+            }
+        }
+
+        // Show full response in modal
+        function showResponse(key, data) {
+            const modal = document.getElementById('responseModal');
+            const modalContent = document.getElementById('modalContent');
+
+            const barClass = data.charPercentage > 100 ? 'over' : (data.charPercentage > 80 ? 'warning' : 'safe');
+
+            modalContent.innerHTML = `
+                <h2>${data.title}</h2>
+                <div class="char-count">
+                    <strong>${data.charCount.toLocaleString()}</strong> / ${data.charLimit.toLocaleString()} characters
+                    <span style="float: right;">${data.charPercentage.toFixed(1)}%</span>
+                </div>
+                <div class="char-bar-container">
+                    <div class="char-bar ${barClass}" style="width: ${Math.min(data.charPercentage, 100)}%"></div>
+                </div>
+                ${data.overLimit ? '<div class="info-box" style="background: #fff5f5; border-color: #e53e3e;"><strong>⚠️ Over Limit:</strong> This response exceeds the 10,000 character limit and must be shortened before submission.</div>' : ''}
+                ${data.needsCompletion ? '<div class="info-box" style="background: #fffaf0; border-color: #ed8936;"><strong>⚠️ Needs Completion:</strong> This response contains placeholders that need to be filled in.</div>' : ''}
+                <div class="response-text">${data.plainText}</div>
+            `;
+
+            modal.style.display = 'block';
+        }
+
+        // Close modal
+        document.querySelector('.close').addEventListener('click', () => {
+            document.getElementById('responseModal').style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            const modal = document.getElementById('responseModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Initialize
+        renderResponses();
+    </script>
 </body>
 </html>

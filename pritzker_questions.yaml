@@ -1,0 +1,49 @@
+# Pritzker Family Foundation Application Structure
+
+metadata:
+  program: "Pritzker Children's Initiative (PCI)"
+  foundation: "J.B. and M.K. Pritzker Family Foundation"
+  access_code: "PFFSA2025!"
+  portal_url: "https://www.grantinterface.com/Home/Logon?urlkey=pritzkerfoundation"
+  character_limit_default: 10000
+
+sections:
+  financial_statements_analysis:
+    title: "Financial Statements Analysis"
+    file: "responses/financial_statements_analysis.md"
+    char_limit: 10000
+    
+  ytd_budget_and_revenue:
+    title: "YTD Budget & Revenue"
+    file: "responses/ytd_budget_and_revenue.md"
+    char_limit: 10000
+    
+  project_summary:
+    title: "Project Summary"
+    file: "responses/project_summary.md"
+    char_limit: 10000
+    
+  project_narrative:
+    title: "Project Narrative"
+    file: "responses/project_narrative.md"
+    char_limit: 10000
+    
+  fiscal_sponsor_information:
+    title: "Fiscal Sponsor Information"
+    file: "responses/fiscal_sponsor_information.md"
+    char_limit: 10000
+    
+  key_staff:
+    title: "Key Staff"
+    file: "responses/key_staff.md"
+    char_limit: 10000
+    
+  contact_information:
+    title: "Contact Information"
+    file: "responses/contact_information.md"
+    char_limit: 10000
+    
+  open_ended_questions:
+    title: "Open-Ended Questions"
+    file: "responses/open_ended_questions.md"
+    char_limit: 10000
