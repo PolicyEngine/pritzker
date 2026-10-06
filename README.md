@@ -1,29 +1,27 @@
-# Pritzker Family Foundation Grant Application
+# Pritzker grant dashboard
 
-PolicyEngine application materials for the JB & MK Pritzker Family Foundation grant.
+This repository now contains a static-export Next.js dashboard that tracks PolicyEngine's progress against the Pritzker Children's Initiative policy analysis expansion grant.
 
-## Structure
+## What it includes
 
-- `financials/` - Financial statements and budgets for PSL Foundation
-- `responses/` - Responses to application questions
-- `impact_plan/` - Impact plan document
-- `supporting_documents/` - Questionnaire and other supporting materials
+- A rebuilt dashboard surface for grant progress across model coverage, live tools, and partner connections
+- The original grant source materials in `responses/`, `financials/`, `impact_plan/`, and `supporting_documents/`
+- Builder-style metadata files for the PolicyEngine Claude dashboard workflow: `plan.yaml`, `.claude/settings.json`, and `CLAUDE.md`
 
-## Key Documents
+## Development
 
-### Financials
-- PSL Foundation Audited Financial Statements (FY2023)
-- Statement of Activity FY2024 and FY2025
-- PSL-F Operational Budget
+```bash
+bun install
+make dev
+```
 
-### Application Materials
-- Impact Plan
-- Application questionnaire (PDF)
-- Question responses (markdown files)
+## Checks
 
-## About
+```bash
+make test
+make build
+```
 
-PSL Foundation (PolicyEngine's fiscal sponsor):
-- EIN: 86-3092437
-- Founded: 2021
-- Staff: 4 FTE
+## Deployment
+
+GitHub Pages now builds the Next.js app and publishes the exported `out/` directory instead of the legacy `docs/` page.

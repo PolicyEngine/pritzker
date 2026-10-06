@@ -1,6 +1,13 @@
 # macOS
 .DS_Store
 
+# Build output
+.next
+out
+node_modules
+coverage
+tsconfig.tsbuildinfo
+
 # Temporary files
 *.tmp
 ~$*
