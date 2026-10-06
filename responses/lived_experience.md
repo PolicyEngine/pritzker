@@ -1,3 +1,9 @@
+---
+key: lived_experience
+status: draft
+title: Lived Experience
+---
+
 [NEEDS TO BE COMPLETED - Describe how PolicyEngine incorporates perspectives of people with lived experience of poverty, use of safety net programs, or raising young children, through:
 - Advisory boards or councils
 - User testing and feedback processes

@@ -1,1 +1,7 @@
+---
+key: entity_mission
+status: draft
+title: Entity Mission
+---
+
 PolicyEngine's mission is to compute the impact of public policy for the world. The organization develops free, open-source tools that make policy analysis accessible and data-driven, enabling evidence-based decision-making on tax and benefit policies that affect families and communities.

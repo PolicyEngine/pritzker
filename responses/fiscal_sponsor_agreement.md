@@ -1,3 +1,9 @@
+---
+key: fiscal_sponsor_agreement
+status: draft
+title: Fiscal Sponsor Agreement
+---
+
 PolicyEngine operates under a fiscal sponsorship agreement with PSL Foundation (EIN: 86-3092437). Under this arrangement:
 
 - PSL Foundation serves as the fiscal sponsor, maintaining 501(c)(3) tax-exempt status

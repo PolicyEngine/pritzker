@@ -1,3 +1,9 @@
+---
+key: sustainability
+status: draft
+title: Sustainability
+---
+
 **Sustainability Beyond Grant Period:**
 
 Once developed, the Child Poverty Impact Dashboard and state-level TANF/CCDF modeling capabilities become permanent features of PolicyEngine's platform, requiring only maintenance and updates rather than ongoing development investment. This infrastructure will continue serving users indefinitely.

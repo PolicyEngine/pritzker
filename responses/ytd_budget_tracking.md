@@ -1,3 +1,9 @@
+---
+key: ytd_budget_tracking
+status: draft
+title: Ytd Budget Tracking
+---
+
 For FY2026 (July 2025 - June 2026), revenue and expenses are tracking to the budgeted plan:
 
 - **Budgeted Revenue (FY2026):** $1,000,000

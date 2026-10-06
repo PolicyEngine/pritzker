@@ -1,3 +1,9 @@
+---
+key: project_narrative_text
+status: draft
+title: Project Narrative Text
+---
+
 **Purpose:**
 
 This project expands PolicyEngine's analytical capabilities to comprehensively model family economic security policies affecting prenatal-to-age-3 children across all 50 states. The expansion focuses on three core deliverables:

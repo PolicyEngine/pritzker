@@ -1,3 +1,9 @@
+---
+key: key_staff
+status: draft
+title: Key Staff
+---
+
 **Max Ghenis, Co-founder and CEO**
 Max leads project strategy and partnership coordination. He previously founded and served as president of the UBI Center, a think tank researching universal basic income policies, and worked at Google as a data scientist, leading projects to make internal operations and products more inclusive across the world. Max earned a bachelor's degree in operations research from UC Berkeley and a master's degree in Data, Economics, and Development Policy from MIT.
 

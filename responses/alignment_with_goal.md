@@ -1,3 +1,9 @@
+---
+key: alignment_with_goal
+status: draft
+title: Alignment With Goal
+---
+
 This project directly advances the Pritzker Children's Initiative's Movement Building strategy by providing the analytical infrastructure necessary for advocates, policymakers, and researchers to make evidence-based decisions about prenatal-to-age-3 investments.
 
 The project aligns with PCI's North Star goals through:
